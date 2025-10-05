@@ -5,7 +5,7 @@
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "gemini-mcp": "dist/index.js"
+    "gemini-mcp-tool": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",
