@@ -10,9 +10,11 @@ export async function executeCommand(
     const startTime = Date.now();
     Logger.commandExecution(command, args, startTime);
 
+    const isWindows = process.platform === "win32";
+
     const childProcess = spawn(command, args, {
       env: process.env,
-      shell: false,
+      shell: isWindows, // Use shell on Windows
       stdio: ["ignore", "pipe", "pipe"],
     });
 
